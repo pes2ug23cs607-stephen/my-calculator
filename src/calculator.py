@@ -11,14 +11,36 @@ def subtract(a, b):
     """Subtract b from a"""
     return a - b
 
+# def multiply(a, b):
+#     """Multiply two numbers with input validation and logging."""
+#     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+#         raise TypeError("Both arguments must be numbers")
+    
+#     print(f"Multiplying {a} × {b}")  # Added logging
+#     result = a * b
+#     print(f"Result: {result}")
+#     return result
+
+# def divide(a, b):
+#     """Divide a by b with enhanced error handling."""
+#     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+#         raise TypeError("Division requires numeric inputs")
+#     if b == 0:
+#         raise ValueError(f"Cannot divide {a} by zero - division by zero is undefined")
+    
+#     print(f"Dividing {a} ÷ {b}")  # Added logging
+#     result = a / b
+#     print(f"Result: {result}")
+#     return result
 def multiply(a, b):
     """Multiply two numbers with input validation and logging."""
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
         raise TypeError("Both arguments must be numbers")
-    
-    print(f"Multiplying {a} × {b}")  # Added logging
+
+    # NOTE: Remove print statements if you don't want terminal output
+    # print(f"Multiplying {a} × {b}") 
     result = a * b
-    print(f"Result: {result}")
+    # print(f"Result: {result}")
     return result
 
 def divide(a, b):
@@ -27,10 +49,11 @@ def divide(a, b):
         raise TypeError("Division requires numeric inputs")
     if b == 0:
         raise ValueError(f"Cannot divide {a} by zero - division by zero is undefined")
-    
-    print(f"Dividing {a} ÷ {b}")  # Added logging
+
+    # NOTE: Remove print statements if you don't want terminal output
+    # print(f"Dividing {a} ÷ {b}") 
     result = a / b
-    print(f"Result: {result}")
+    # print(f"Result: {result}")
     return result
 
 # TODO: Students will add multiply, divide, power, sqrt functions
