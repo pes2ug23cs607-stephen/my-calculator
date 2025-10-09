@@ -5,8 +5,11 @@ Example: python src/cli.py add 5 3
 import sys 
 import click 
 # In src/cli.py:
-from src.calculator import add, subtract, multiply, divide, power, square_root@click.command() 
-@click.argument('operation') 
+from src.calculator import add, subtract, multiply, divide, power, square_root
+
+
+@click.command()
+# ... rest of the code@click.argument('operation') 
 @click.argument('num1', type=float) 
 @click.argument('num2', type=float, required=False) 
 def calculate(operation, num1, num2=None): 
