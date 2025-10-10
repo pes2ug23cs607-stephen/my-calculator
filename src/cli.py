@@ -5,8 +5,10 @@ Example: python src/cli.py add 5 3
 
 import sys
 import click
+
 # Note: Pylint suggests fixing this import by using the full path
 from src.calculator import add, subtract, multiply, divide, power, square_root
+
 
 @click.command()
 @click.argument("operation")
@@ -45,6 +47,7 @@ def calculate(operation, num1, num2=None):
     except Exception as e:
         click.echo(f"Unexpected error: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     calculate()
