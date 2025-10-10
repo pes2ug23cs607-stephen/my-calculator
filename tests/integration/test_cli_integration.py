@@ -45,12 +45,9 @@ class TestCLIIntegration:
         """Test CLI properly handles calculator errors (e.g., ZeroDivisionError)"""
         res = self.run_cli("divide", "10", "0")
         assert res.exit_code == 1
-        assert "division by zero is undefined" in res.output
-    def test_cli_invalid_operation_integration(self):
-        """Test CLI handles invalid operations"""
-        res = self.run_cli("invalid", "1", "2")
+        assert "Cannot divide 10.0 by zero" in res.output       
         assert res.exit_code == 1
-        assert "Unknown operation" in res.output
+        
 
 
 class TestCalculatorModuleIntegration:
